@@ -1,4 +1,4 @@
-package org.afrosoft.projectmanagement.repository.converters;
+package org.afrosoft.projectmanagement.client.repository.converters;
 
 import org.afrosoft.projectmanagement.model.Client;
 import org.springframework.core.convert.converter.Converter;

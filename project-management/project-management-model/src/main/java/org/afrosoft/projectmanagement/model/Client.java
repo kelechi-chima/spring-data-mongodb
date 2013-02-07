@@ -41,6 +41,18 @@ public class Client {
   }
 
   @Override
+  public int hashCode() {
+    // TODO override properly
+    return super.hashCode();
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    // TODO override properly
+    return super.equals(obj);
+  }
+
+  @Override
   public String toString() {
     return "Client [client id=" + clientId + ", name=" + clientName + ", contact=" + mainContact +"]";
   }

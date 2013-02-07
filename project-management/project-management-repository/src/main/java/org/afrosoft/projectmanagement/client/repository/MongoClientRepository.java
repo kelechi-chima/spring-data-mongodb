@@ -1,4 +1,4 @@
-package org.afrosoft.projectmanagement.repository;
+package org.afrosoft.projectmanagement.client.repository;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -7,6 +7,7 @@ import static org.springframework.data.mongodb.core.query.Update.update;
 import java.util.List;
 
 import org.afrosoft.projectmanagement.model.Client;
+import org.afrosoft.projectmanagement.repository.RepositoryException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

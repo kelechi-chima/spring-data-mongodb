@@ -14,8 +14,8 @@
 	<context:annotation-config/>
 	<context:component-scan base-package="org.afrosoft.projectmanagement.repository"/>
 	
-	<bean id="clientReadConverter" class="org.afrosoft.projectmanagement.repository.converters.ClientReadConverter"/>
-	<bean id="clientWriteConverter" class="org.afrosoft.projectmanagement.repository.converters.ClientWriteConverter"/>
+	<bean id="clientReadConverter" class="org.afrosoft.projectmanagement.client.repository.converters.ClientReadConverter"/>
+	<bean id="clientWriteConverter" class="org.afrosoft.projectmanagement.client.repository.converters.ClientWriteConverter"/>
 	
 	<mongo:mongo id="mongo" host="${mongo.host}" port="${mongo.port}" />
 	
@@ -35,5 +35,9 @@
 		<constructor-arg name="mongoConverter" ref="mappingConverter"/>
 		<property name="writeResultChecking" ref="writeResultChecking"/>
 	</bean>
+	
+	<mongo:repositories base-package="org.afrosoft.projectmanagement.*.repository">
+	 
+	</mongo:repositories>
 		
 </beans>

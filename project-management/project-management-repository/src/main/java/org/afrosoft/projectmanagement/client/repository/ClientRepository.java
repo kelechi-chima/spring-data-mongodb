@@ -1,8 +1,9 @@
-package org.afrosoft.projectmanagement.repository;
+package org.afrosoft.projectmanagement.client.repository;
 
 import java.util.List;
 
 import org.afrosoft.projectmanagement.model.Client;
+import org.afrosoft.projectmanagement.repository.RepositoryException;
 
 public interface ClientRepository {
 
