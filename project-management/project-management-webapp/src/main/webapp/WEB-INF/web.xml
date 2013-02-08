@@ -13,7 +13,7 @@
 
 	<servlet-mapping>
 	  <servlet-name>FacesServlet</servlet-name>
-	  <url-pattern>/pm/*</url-pattern>
+	  <url-pattern>/p/*</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
