@@ -6,6 +6,19 @@
     
   <display-name>Project Management Web App</display-name>
   
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+  
   <listener>
     <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
   </listener>
@@ -18,7 +31,6 @@
 
 	<servlet-mapping>
 	  <servlet-name>FacesServlet</servlet-name>
-	  <url-pattern>/faces/*</url-pattern>
+	  <url-pattern>/app/*</url-pattern>
 	</servlet-mapping>
-	
 </web-app>

@@ -19,7 +19,7 @@ import com.mongodb.MongoException;
 
 @Ignore("Come back to this after JSF stuff")
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:/spring-repository-config.xml")
+@ContextConfiguration(locations="classpath:/org/afrosoft/projectmanagement/repository/repository-config.xml")
 public class StaffRepositoryTest {
 
   @Autowired

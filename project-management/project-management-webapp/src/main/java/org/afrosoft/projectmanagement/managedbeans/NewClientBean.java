@@ -9,8 +9,12 @@ public class NewClientBean implements Serializable {
   private static final long serialVersionUID = 7204514611935631166L;
   
   private Client client;
+  
+  public NewClientBean() {
+  	client = new Client();
+  }
 
-  public Client getClient() {
+	public Client getClient() {
     return client;
   }
 

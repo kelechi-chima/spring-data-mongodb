@@ -36,8 +36,12 @@
 		<property name="writeResultChecking" ref="writeResultChecking"/>
 	</bean>
 	
-	<mongo:repositories base-package="org.afrosoft.projectmanagement.*.repository">
+	<bean id="clientRepository" class="org.afrosoft.projectmanagement.client.repository.MongoClientRepository">
+	  <constructor-arg name="mongoTemplate" ref="mongoTemplate"/>
+	</bean>
+	
+	<!-- <mongo:repositories base-package="org.afrosoft.projectmanagement.*.repository">
 	 
-	</mongo:repositories>
+	</mongo:repositories> -->
 		
 </beans>

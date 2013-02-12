@@ -2,22 +2,47 @@
 <faces-config version="2.0"
   xmlns="http://java.sun.com/xml/ns/javaee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd ">
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
   
   <application>
+    <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+  
     <resource-bundle>
-      <description>General text messages that can be localized.</description>
+      <description>UI messages that can be localized. Messages include labels and errors.</description>
       <base-name>org.afrosoft.projectmanagement.resources.Messages</base-name>
       <var>messages</var>
     </resource-bundle>
-    
+    <locale-config>
+      <default-locale>en</default-locale>
+    </locale-config>
   </application>
   
   <managed-bean>
     <description>Bean that holds a new client instance.</description>
-    <managed-bean-name>NewClientBean</managed-bean-name>
+    <managed-bean-name>newClientBean</managed-bean-name>
     <managed-bean-class>org.afrosoft.projectmanagement.managedbeans.NewClientBean</managed-bean-class>
     <managed-bean-scope>session</managed-bean-scope>
   </managed-bean>
+  
+  <managed-bean>
+    <managed-bean-name>clientController</managed-bean-name>
+    <managed-bean-class>org.afrosoft.projectmanagement.controllers.ClientController</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+    <managed-property>
+      <property-name>clientService</property-name>
+      <property-class>org.afrosoft.projectmanagement.service.ClientService</property-class>
+      <value>#{clientService}</value>
+    </managed-property>
+  </managed-bean>
+  
+  <navigation-rule>
+    <from-view-id>/manage-clients.jsp</from-view-id>
+    <navigation-case>
+      <from-outcome>success</from-outcome>
+      <to-view-id>/manage-clients.jsp</to-view-id>
+      <!-- <to-view-id>/client-added.jsp</to-view-id>
+      <redirect id="afterPostingNewClient"></redirect> -->
+    </navigation-case>
+  </navigation-rule>
   
 </faces-config>

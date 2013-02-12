@@ -14,8 +14,11 @@ public class Client implements Serializable {
   private String clientId;
   private String clientName;
   private String mainContact;
+  
+  public Client() {
+  }
 
-  public Client(String clientId) {
+	public Client(String clientId) {
     this.clientId = clientId;
   }
   

@@ -5,8 +5,11 @@
     </encoder>
   </appender>
 
-  <logger name="org.apache.myfaces.webapp.WebConfigParamsLogger" level="WARN"/>
-  <logger name="org.apache.myfaces" level="WARN"/>
+  <logger name="org.afrosoft.projectmanagement" />
+
+  <logger name="org.apache.commons.digester.Digester" level="WARN" />
+
+  <logger name="org.apache.myfaces" level="WARN" />
 
   <root level="INFO">
     <appender-ref ref="STDOUT" />
